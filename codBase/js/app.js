@@ -5,7 +5,7 @@ var operacion;
 
 function init(){
   //Variables
-  var resultado = document.getElementById('igual');
+  var resultado = document.getElementById('display');
   var reset = document.getElementById('on');
   var suma = document.getElementById('mas');
   var resta = document.getElementById('menos');
