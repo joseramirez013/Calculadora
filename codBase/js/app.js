@@ -26,7 +26,7 @@ function init(){
 
 
   //Eventos de click
-  // Si el valor inicial es cero se reemplaza por el número presionado
+  // Si el valor inicial es cero ejecuta la función "limpiar" y reemplaza el contenido por la tecla presionada
   uno.onclick = function(event){
     if (display.textContent == "0") {
       limpiar();
@@ -119,6 +119,7 @@ function init(){
 
 }
 
+// Función que limpia la pantalla
 function limpiar() {
   display.textContent = "";
 
