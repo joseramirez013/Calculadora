@@ -22,7 +22,8 @@ function init(){
   var ocho = document.getElementById('8');
   var nueve = document.getElementById('9');
   var cero = document.getElementById('0');
-  var punto = document.getElementById('punto')
+  var punto = document.getElementById('punto');
+  var reset = document.getElementById('on');
 
 
   //Eventos de click
@@ -136,6 +137,10 @@ cero.onclick = function(event){
   } else {
     display.textContent = display.textContent + "0";
   }
+}
+
+reset.onclick = function(event){
+  display.textContent = "0";
 }
 
 }
