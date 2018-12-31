@@ -27,100 +27,120 @@ function init(){
 
   //Eventos de click
   // Si el valor inicial es cero ejecuta la función "limpiar" y reemplaza el contenido por la tecla presionada
-  uno.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "1";
-    } else {
-      display.textContent = display.textContent + "1";
-    }
-  }
 
-  dos.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "2";
-    } else {
-      display.textContent = display.textContent + "2";
-    }
+uno.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "1";
+  } else {
+    display.textContent = display.textContent + "1";
   }
+}
 
-  tres.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "3";
-    } else {
-      display.textContent = display.textContent + "3";
-    }
+dos.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "2";
+  } else {
+    display.textContent = display.textContent + "2";
   }
+}
 
-  cuatro.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "4";
-    } else {
-      display.textContent = display.textContent + "4";
-    }
+tres.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "3";
+  } else {
+    display.textContent = display.textContent + "3";
   }
+}
 
-  cinco.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "5";
-    } else {
-      display.textContent = display.textContent + "5";
-    }
+cuatro.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "4";
+  } else {
+    display.textContent = display.textContent + "4";
   }
+}
 
-  seis.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "6";
-    } else {
-      display.textContent = display.textContent + "6";
-    }
+cinco.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "5";
+  } else {
+    display.textContent = display.textContent + "5";
   }
+}
 
-  siete.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "7";
-    } else {
-      display.textContent = display.textContent + "7";
-    }
+seis.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "6";
+  } else {
+    display.textContent = display.textContent + "6";
   }
+}
 
-  ocho.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "8";
-    } else {
-      display.textContent = display.textContent + "8";
-    }
+siete.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "7";
+  } else {
+    display.textContent = display.textContent + "7";
   }
+}
 
-  nueve.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "9";
-    } else {
-      display.textContent = display.textContent + "9";
-    }
+ocho.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "8";
+  } else {
+    display.textContent = display.textContent + "8";
   }
+}
 
-  cero.onclick = function(event){
-    if (display.textContent == "0") {
-      limpiar();
-      display.textContent = display.textContent + "0";
-    } else {
-      display.textContent = display.textContent + "0";
-    }
+nueve.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "9";
+  } else {
+    display.textContent = display.textContent + "9";
   }
+}
+
+cero.onclick = function(event){
+  if (display.textContent.length >= "8") {
+    display.textContent = display.textContent;
+  } else if (display.textContent == "0") {
+    limpiar();
+    display.textContent = display.textContent + "0";
+  } else {
+    display.textContent = display.textContent + "0";
+  }
+}
 
 }
 
 // Función que limpia la pantalla
 function limpiar() {
   display.textContent = "";
-
 }
