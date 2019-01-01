@@ -24,6 +24,7 @@ function init(){
   var cero = document.getElementById('0');
   var punto = document.getElementById('punto');
   var reset = document.getElementById('on');
+  var signo = document.getElementById('sign');
 
 
   //Eventos de click
@@ -152,9 +153,21 @@ reset.onclick = function(event){
   display.textContent = "0";
 }
 
+signo.onclick = function(event){
+  opuesto();
+}
+
 }
 
 // Función que limpia la pantalla
 function limpiar() {
   display.textContent = "";
+}
+
+//Funcion invertir numero
+function opuesto(){
+  nx = Number(display.textContent); //Convertir en numero
+  nx = -nx; //Cambiar el signo
+  x = String(nx); //Volver a convertir en numero
+  display.innerHTML=x;
 }
