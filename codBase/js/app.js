@@ -139,6 +139,15 @@ cero.onclick = function(event){
   }
 }
 
+//IndexOf: Si la secuencia devuelve un -1, significa que no existe la secuencia indicada en el argumento,
+// por tanto se agrega al contenido
+punto.onclick = function(event){
+  if (display.textContent.indexOf(".") == -1) {
+    display.textContent = display.textContent + ".";
+  }
+}
+
+//Boton ON/C
 reset.onclick = function(event){
   display.textContent = "0";
 }
