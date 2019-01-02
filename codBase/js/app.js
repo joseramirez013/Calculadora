@@ -159,10 +159,17 @@ signo.onclick = function(event){
   opuesto();
 }
 
-//suma
+//Operacion de Suma
 suma.onclick = function(event){
   operandoa = display.textContent;
   operacion = "+";
+  limpiar();
+}
+
+//Operacion de Resta
+resta.onclick = function(event){
+  operandoa = display.textContent;
+  operacion = '-';
   limpiar();
 }
 
