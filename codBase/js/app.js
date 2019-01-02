@@ -180,6 +180,13 @@ multiplicacion.onclick = function(event){
   limpiar();
 }
 
+//Operacion de Division
+division.onclick = function(event){
+  operandoa = display.textContent;
+  operacion = "/";
+  limpiar();
+}
+
 //Resultado de la operación
 igual.onclick = function(event){
   operandob = display.textContent;
