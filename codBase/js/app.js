@@ -173,6 +173,13 @@ resta.onclick = function(event){
   limpiar();
 }
 
+//Operacion de multiplicacion
+multiplicacion.onclick = function(event){
+  operandoa = display.textContent;
+  operacion = '*';
+  limpiar();
+}
+
 //Resultado de la operación
 igual.onclick = function(event){
   operandob = display.textContent;
