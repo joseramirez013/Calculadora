@@ -1,6 +1,6 @@
 //Declaración de variables
-var operando_1;
-var operando_2;
+var operandoa;
+var operandob;
 var operacion;
 
 
@@ -12,6 +12,7 @@ function init(){
   var resta = document.getElementById('menos');
   var multiplicacion = document.getElementById('por');
   var division = document.getElementById('dividido');
+  var igual = document.getElementById('igual')
   var uno = document.getElementById('1');
   var dos = document.getElementById('2');
   var tres = document.getElementById('3');
@@ -150,18 +151,27 @@ punto.onclick = function(event){
 
 //Boton ON/C
 reset.onclick = function(event){
-  display.textContent = "0";
+  resetear();
 }
 
+//Cambio de signo
 signo.onclick = function(event){
   opuesto();
 }
 
+//suma
+suma.onclick = function(event){
+  operandoa = display.textContent;
+  operacion = "+";
+  limpiar();
 }
 
-// Función que limpia la pantalla
-function limpiar() {
-  display.textContent = "";
+//Resultado de la operación
+igual.onclick = function(event){
+  operandob = display.textContent;
+  resolver();
+}
+
 }
 
 //Funcion invertir numero
@@ -170,4 +180,41 @@ function opuesto(){
   nx = -nx; //Cambiar el signo
   x = String(nx); //Volver a convertir en numero
   display.innerHTML=x;
+}
+
+// Función que limpia la pantalla
+function limpiar() {
+  display.textContent = "";
+}
+
+// Funcion resetear
+function resetear(){
+  display.textContent = "";
+  operandoa = 0;
+  operandob = 0;
+  operacion = "";
+}
+
+
+function resolver(){
+  var resul = 0;
+  switch (operacion){
+    case "+":
+      resul = parseFloat(operandoa) + parseFloat(operandob);
+      break;
+
+      case "-":
+        resul = parseFloat(operandoa) - parseFloat(operandob);
+      break;
+
+      case "*":
+        resul = parseFloat(operandoa) * parseFloat(operandob);
+      break;
+
+      case "/":
+        resul = parseFloat(operandoa) / parseFloat(operandob);
+        break;
+  }
+  resetear();
+  display.textContent = resul;
 }
