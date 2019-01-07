@@ -216,26 +216,27 @@ function resetear(){
   operacion = "";
 }
 
-
+//Funcion que ejecuta las operaciones matematicas básicas.
 function resolver(){
-  var resul = 0;
+  var m = 0;
   switch (operacion){
     case "+":
-      resul = parseFloat(operandoa) + parseFloat(operandob);
+      m = parseFloat(operandoa) + parseFloat(operandob);
       break;
 
       case "-":
-        resul = parseFloat(operandoa) - parseFloat(operandob);
+        m = parseFloat(operandoa) - parseFloat(operandob);
       break;
 
       case "*":
-        resul = parseFloat(operandoa) * parseFloat(operandob);
+        m = parseFloat(operandoa) * parseFloat(operandob);
       break;
 
       case "/":
-        resul = parseFloat(operandoa) / parseFloat(operandob);
+        m = parseFloat(operandoa) / parseFloat(operandob);
         break;
   }
   resetear();
+  var resul = m.toPrecision(7);
   display.textContent = resul;
 }
