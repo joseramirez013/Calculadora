@@ -4,7 +4,7 @@ var operandob;
 var operacion;
 
 
-function init(){
+function calculadora(){
   //Variables
   var display = document.getElementById('display');
   var reset = document.getElementById('on');
@@ -199,7 +199,7 @@ igual.onclick = function(event){
 function opuesto(){
   nx = Number(display.textContent); //Convertir en numero
   nx = -nx; //Cambiar el signo
-  x = String(nx); //Volver a convertir en numero
+  x = String(nx); //Volver a convertir en texto
   display.innerHTML=x;
 }
 
@@ -218,25 +218,36 @@ function resetear(){
 
 //Funcion que ejecuta las operaciones matematicas básicas.
 function resolver(){
-  var m = 0;
+  var resul1 = 0;
   switch (operacion){
     case "+":
-      m = parseFloat(operandoa) + parseFloat(operandob);
+      resul1 = parseFloat(operandoa) + parseFloat(operandob);
       break;
 
       case "-":
-        m = parseFloat(operandoa) - parseFloat(operandob);
+        resul1 = parseFloat(operandoa) - parseFloat(operandob);
       break;
 
       case "*":
-        m = parseFloat(operandoa) * parseFloat(operandob);
+        resul1 = parseFloat(operandoa) * parseFloat(operandob);
       break;
 
       case "/":
-        m = parseFloat(operandoa) / parseFloat(operandob);
+        resul1 = parseFloat(operandoa) / parseFloat(operandob);
         break;
   }
-  resetear();
-  var resul = m.toPrecision(7);
-  display.textContent = resul;
+
+function validar(){
+  largo = resul1.toString().length; //Convierte a string y devuelve la longitud
+    if (largo >= 8) {
+    var resul2 = resul1.toPrecision(6);  //Formatea el resultado a una longitud especificada
+    display.textContent = resul2;
+  }else {
+    display.textContent = resul1;
+  }
+}
+
+resetear();
+validar();
+
 }
