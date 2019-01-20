@@ -2,6 +2,7 @@
 var operandoa;
 var operandob;
 var operacion;
+var tecla_uno;
 
 
 function calculadora(){
@@ -30,8 +31,12 @@ function calculadora(){
 
   //Eventos de click
   // Si el valor inicial es cero ejecuta la función "limpiar" y reemplaza el contenido por la tecla presionada
+uno.onmousedown = function(event){
+  uno.style.height = "60.91px";
+}
 
-uno.onclick = function(event){
+uno.onmouseup = function(event){
+  uno.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -42,7 +47,12 @@ uno.onclick = function(event){
   }
 }
 
-dos.onclick = function(event){
+dos.onmousedown = function(event){
+  dos.style.height = "60.91px";
+}
+
+dos.onmouseup = function(event){
+  dos.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -53,7 +63,12 @@ dos.onclick = function(event){
   }
 }
 
-tres.onclick = function(event){
+tres.onmousedown = function(event){
+  tres.style.height = "60.91px";
+}
+
+tres.onmouseup = function(event){
+  tres.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -64,7 +79,12 @@ tres.onclick = function(event){
   }
 }
 
-cuatro.onclick = function(event){
+cuatro.onmousedown = function(event){
+  cuatro.style.height = "60.91px";
+}
+
+cuatro.onmouseup = function(event){
+  cuatro.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -75,7 +95,12 @@ cuatro.onclick = function(event){
   }
 }
 
-cinco.onclick = function(event){
+cinco.onmousedown = function(event){
+  cinco.style.height = "60.91px";
+}
+
+cinco.onmouseup = function(event){
+  cinco.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -86,7 +111,12 @@ cinco.onclick = function(event){
   }
 }
 
-seis.onclick = function(event){
+seis.onmousedown = function(event){
+  seis.style.height = "60.91px";
+}
+
+seis.onmouseup = function(event){
+  seis.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -97,7 +127,12 @@ seis.onclick = function(event){
   }
 }
 
-siete.onclick = function(event){
+siete.onmousedown = function(event){
+  siete.style.height = "60.91px";
+}
+
+siete.onmouseup = function(event){
+  siete.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -108,7 +143,12 @@ siete.onclick = function(event){
   }
 }
 
-ocho.onclick = function(event){
+ocho.onmousedown = function(event){
+  ocho.style.height = "60.91px";
+}
+
+ocho.onmouseup = function(event){
+  ocho.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -119,7 +159,12 @@ ocho.onclick = function(event){
   }
 }
 
-nueve.onclick = function(event){
+nueve.onmousedown = function(event){
+  nueve.style.height = "60.91px";
+}
+
+nueve.onmouseup = function(event){
+  nueve.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -130,7 +175,12 @@ nueve.onclick = function(event){
   }
 }
 
-cero.onclick = function(event){
+cero.onmousedown = function(event){
+  cero.style.height = "60.91px";
+}
+
+cero.onmouseup = function(event){
+  cero.style.height = "62.91px";
   if (display.textContent.length >= "8") {
     display.textContent = display.textContent;
   } else if (display.textContent == "0") {
@@ -143,55 +193,96 @@ cero.onclick = function(event){
 
 //IndexOf: Si la secuencia devuelve un -1, significa que no existe la secuencia indicada en el argumento,
 // por tanto se agrega al contenido
-punto.onclick = function(event){
+punto.onmousedown = function(event){
+  punto.style.height = "60.91px";
+}
+
+punto.onmouseup = function(event){
+  punto.style.height = "62.91px";
   if (display.textContent.indexOf(".") == -1) {
     display.textContent = display.textContent + ".";
   }
 }
 
 //Boton ON/C
-reset.onclick = function(event){
+reset.onmousedown = function(event){
+  reset.style.height = "60.91px";
+}
+
+reset.onmouseup = function(event){
+  reset.style.height = "62.91px";
   resetear();
 }
 
 //Cambio de signo
-signo.onclick = function(event){
+signo.onmousedown = function(event){
+  signo.style.height = "60.91px";
+}
+
+signo.onmouseup = function(event){
+  signo.style.height = "62.91px";
   opuesto();
 }
 
 //Operacion de Suma
+suma.onmousedown = function(event){
+  suma.style.height = "98%";
+}
+
 suma.onclick = function(event){
+  suma.style.height = "100%";
   operandoa = display.textContent;
   operacion = "+";
   limpiar();
 }
 
 //Operacion de Resta
-resta.onclick = function(event){
+resta.onmousedown = function(event){
+  resta.style.height = "60.91px";
+}
+
+resta.onmouseup = function(event){
+  resta.style.height = "62.91px";
   operandoa = display.textContent;
   operacion = '-';
   limpiar();
 }
 
 //Operacion de multiplicacion
+multiplicacion.onmousedown = function(event){
+  multiplicacion.style.height = "60.91px";
+}
+
 multiplicacion.onclick = function(event){
+  multiplicacion.style.height = "62.91px";
   operandoa = display.textContent;
   operacion = '*';
   limpiar();
 }
 
 //Operacion de Division
+division.onmousedown = function(event){
+  division.style.height = "60.91px";
+}
+
 division.onclick = function(event){
+  division.style.height = "62.91px";
   operandoa = display.textContent;
   operacion = "/";
   limpiar();
 }
 
 //Resultado de la operación
-igual.onclick = function(event){
+igual.onmousedown = function(event){
+  igual.style.height = "60.91px";
+}
+
+igual.onmouseup = function(event){
+  igual.style.height = "62.91px";
   operandob = display.textContent;
   resolver();
 }
+
 
 }
 
@@ -216,9 +307,11 @@ function resetear(){
   operacion = "";
 }
 
+
+
 //Funcion que ejecuta las operaciones matematicas básicas.
 function resolver(){
-  var resul1 = 0;
+  var resul1;
   switch (operacion){
     case "+":
       resul1 = parseFloat(operandoa) + parseFloat(operandob);
@@ -247,7 +340,7 @@ function validar(){
   }
 }
 
-resetear();
+//resetear();
 validar();
 
 }
