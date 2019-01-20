@@ -2,7 +2,6 @@
 var operandoa;
 var operandob;
 var operacion;
-var tecla_uno;
 
 
 function calculadora(){
